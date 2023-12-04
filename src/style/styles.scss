@@ -72,13 +72,13 @@ $transition: 0.2s ease all;
 body{
     background: #fff;
     font-family: "Inter" !important;
-    color: #2A4A65;
+    color: #474646;
 
     
     h1, h2, h3, h4, h5, h6{
         font-family: "Inter";
         margin-top: 15px;
-        color: #2A4A65;
+        color: #474646;
     }
     h1{
         font-size: 1.6em;
@@ -93,14 +93,14 @@ body{
         margin: 25px 0;
         font-size: 0.9em !important;
         line-height: 200% !important;
-        color: #2A4A65;
+        color: #474646;
     }
     a{
         font-size: 0.9em !important;
         text-decoration: none;
         font-weight: 600;
         transition: all ease 0.3s;
-        color: #2A4A65;
+        color: #474646;
         &:hover{
             color: #7A9FBC;
             transition: all ease 0.3s;
@@ -110,7 +110,7 @@ body{
         margin-top: 15px;
         li{
             font-size: 0.9em !important;
-            color: #2A4A65;
+            color: #474646;
 
         }
     }

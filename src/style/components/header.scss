@@ -162,6 +162,12 @@ header{
                 list-style: none;
                 text-transform: uppercase;
                 font-weight: 300;
+                a{
+                    color: #585859;
+                    &:hover{
+                        color: #a9a7a7;
+                    }
+                }
             }
         }
     }
@@ -195,9 +201,9 @@ header{
             margin-right: 10px;
         }
         .calltext{
-            @include phone-only{
-                display: none;
-            }
+            // @include phone-only{
+            //     display: none;
+            // }
         }
     }
     .gatsby-image-wrapper{

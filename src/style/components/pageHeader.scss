@@ -71,6 +71,11 @@
             p{
 
             }
+            a{
+                @include tablet-portrait{
+                    display: none;
+                }
+            }
             .schedule-btn{
                 margin-top: 50px;
                 // text-align: center;
@@ -112,6 +117,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            align-items: center;
             .service{
                 // width: 30%;
                 width: 200px;
