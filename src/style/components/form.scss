@@ -86,6 +86,41 @@
             margin-bottom: 5em;
           }
       }
+      .formButton{
+            padding: 15px 30px;
+            border-radius: 20px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            &:hover{
+                background-color: #204A69 !important;
+                span{
+                    color: #fff !important;
+                }
+            }
+
+            &.mobile-button{
+                display:none;
+                @include tablet-portrait(){
+                    display: block;
+                }
+            }
+            &.desktop-button{
+                @include tablet-portrait(){
+                    display:none;
+                }
+            }
+
+        a{
+            color: #fff;
+        }
+        span{
+            // font-style: italic;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-right: 10px;
+        }
+      }
       
   }
 
@@ -196,10 +231,10 @@
                   }
               }
 
-              @supports (-webkit-overflow-scrolling: touch) {
-                  /* CSS specific to iOS devices */ 
-                  height: 450px;
-                }
+            //   @supports (-webkit-overflow-scrolling: touch) {
+            //       /* CSS specific to iOS devices */ 
+            //       height: 450px;
+            //     }
               .column-inner{
                   padding: 50px;
                   height: 100%;
@@ -209,7 +244,7 @@
                   border-radius: 20px 0 0 20px;
                   width: 100%;
                   @include tablet-portrait(){
-                    padding: 2em;
+                    padding: 6em 2em 2em;
                     border-radius: 0;
 
                     
@@ -289,6 +324,7 @@
   
               @include desktop{
                   padding: 2em;
+                  padding-top: 4em;
               }
               @include tablet-landscape(){
                   display: flex;
@@ -332,13 +368,24 @@
           color: #353535;
           font-weight: 800;
           margin-bottom: 0.5em;
+          @include tablet-portrait(){
+            margin: 0;
+          }
       }
   
+      p{
+        @include tablet-portrait(){
+            margin: 0;
+        }
+      }
       form {
           display: flex;
           flex-direction: column;
           padding-top: 2em;
           gap: 10px;
+          @include tablet-portrait(){
+            padding-top: 1em;
+          }
   
           input[type=text], input[type=email], input[type=tel]{
             background-color: rgba(122, 160, 189, 0.10);
