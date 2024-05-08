@@ -212,6 +212,7 @@ const Layout = ({ children }) => {
                     }
                     `}
                   </style>
+                  <script>{`test`}</script>
     </Helmet>
     <noscript>
    <a href='https://www.clickcease.com' rel='nofollow'><img src='https://monitor.clickcease.com/stats/stats.aspx' alt='ClickCease'/></a>
