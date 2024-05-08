@@ -60,11 +60,10 @@ export default () => (
                   className="align-center logo"
                   alt="Logo"
                 />
-          <p>&copy; {data.sanityCompanyInfo.companyname} | Marketing by <a href="http://vitalstorm.com/" target="_blank" rel="noopener noreferrer">VitalStorm</a></p> 
+          <p>&copy; {data.sanityCompanyInfo.companyname}</p> 
           
         </div>
         
-              <script src="https://s3.amazonaws.com/vs.static-files/vs_lp_conv_bundle.js"  async defer onload="SETUP_VS_LP();"></script>
       </footer>
         )}
         />
