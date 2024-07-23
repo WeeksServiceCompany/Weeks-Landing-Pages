@@ -30,7 +30,7 @@ export const query = graphql`
 `
 
 
-export default ({data}) => (
+const NotFoundPage = ({data}) => (
   <Layout>
     <SEO title="404: Not found" />
     <BackgroundImage
@@ -52,3 +52,5 @@ export default ({data}) => (
     </BackgroundImage>
   </Layout>
 )
+
+export default NotFoundPage
