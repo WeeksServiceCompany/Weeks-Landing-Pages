@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import BackgroundImage from 'gatsby-background-image'
 import Form from "../components/form"
 
 export const query = graphql`
@@ -37,7 +36,6 @@ const NotFoundPage = ({data}) => (
         <Link to="/" style={{backgroundColor: data.sanityCompanyInfo.accentcolor.hex}}>Go back home</Link>
       </div>
     </section>
-    </BackgroundImage>
   </Layout>
 )
 
