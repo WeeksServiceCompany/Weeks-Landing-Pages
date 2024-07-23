@@ -2,12 +2,19 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Form from "../components/form"
+import BackgroundImage from 'gatsby-background-image'
 
 export const query = graphql`
     query errorQuery{
         sanityCompanyInfo {
             companyname
+            emptypage{
+              asset{
+                fluid(maxWidth: 1920){
+                  ...GatsbySanityImageFluid
+                }
+              }
+            }
             primarycolor{
                 hex
             }
@@ -23,9 +30,15 @@ export const query = graphql`
 `
 
 
-const NotFoundPage = ({data}) => (
+export default ({data}) => (
   <Layout>
     <SEO title="404: Not found" />
+    <BackgroundImage
+      style={{
+        height: "100%",
+        backgroundPosition: "center"
+      }}
+      fluid={data.sanityCompanyInfo.emptypage.asset.fluid}>
         <div className="pageNotFound-bg" style={{
               backgroundColor: data.sanityCompanyInfo.primarycolor.hex,
               opacity: "0.6"
@@ -36,7 +49,6 @@ const NotFoundPage = ({data}) => (
         <Link to="/" style={{backgroundColor: data.sanityCompanyInfo.accentcolor.hex}}>Go back home</Link>
       </div>
     </section>
+    </BackgroundImage>
   </Layout>
 )
-
-export default NotFoundPage
