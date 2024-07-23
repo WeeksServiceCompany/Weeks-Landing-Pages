@@ -9,13 +9,6 @@ export const query = graphql`
     query errorQuery{
         sanityCompanyInfo {
             companyname
-            emptypage{
-              asset{
-                fluid(maxWidth: 1920){
-                  ...GatsbySanityImageFluid
-                }
-              }
-            }
             primarycolor{
                 hex
             }
@@ -34,12 +27,6 @@ export const query = graphql`
 const NotFoundPage = ({data}) => (
   <Layout>
     <SEO title="404: Not found" />
-    <BackgroundImage
-      style={{
-        height: "100%",
-        backgroundPosition: "center"
-      }}
-      fluid={data.sanityCompanyInfo.emptypage.asset.fluid}>
         <div className="pageNotFound-bg" style={{
               backgroundColor: data.sanityCompanyInfo.primarycolor.hex,
               opacity: "0.6"
