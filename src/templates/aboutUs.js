@@ -263,7 +263,6 @@ export default ({ data }) => {
                 >
                   Schedule Today!
                 </button>
-
               </div>
           </div>
         </div>
