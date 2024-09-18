@@ -246,15 +246,7 @@ export default ({ data }) => {
               <div className="schedule-btn">
                 {/*<button onClick={() => _scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' })} type="button"  className="buttonstyle"  style={{ background: `linear-gradient(to right, ${data.sanityCompanyInfo.gradientcolor1.hex}, ${data.sanityCompanyInfo.gradientcolor2.hex})` }} > Schedule Today! </button>*/}
                 <button
-                  onClick={() => {
-                    window.addEventListener('load', () => {
-                      if (typeof _scheduler !== "undefined") {
-                        _scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' });
-                      } else {
-                        console.error('_scheduler is not defined');
-                      }
-                    });
-                  }}
+                  onClick={() => {_scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' });}}
                   type="button"
                   className="buttonstyle"
                   style={{
