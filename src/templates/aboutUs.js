@@ -249,7 +249,6 @@ export default ({ data }) => {
                   onClick={() => {_scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' });}}
                   type="button"
                   className="buttonstyle"
-                  data-api-key="sched_ueh8gn35t4t1h87sxzab4dp3"
                   style={{
                     background: `linear-gradient(to right, ${data.sanityCompanyInfo.gradientcolor1.hex}, ${data.sanityCompanyInfo.gradientcolor2.hex})`,
                   }}
