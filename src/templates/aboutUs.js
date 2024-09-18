@@ -255,7 +255,6 @@ export default ({ data }) => {
                 >
                   Schedule Today!
                 </button>
-                <iframe></iframe>
               </div>
           </div>
         </div>
