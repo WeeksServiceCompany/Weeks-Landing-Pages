@@ -1,11 +1,11 @@
 var plugins = [{
-      plugin: require('/Users/pietertenret/Documents/VitalStorm/Sandbox/Weeks/gatsby/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('C:/Users/Work/Documents/GitHub/Weeks-Landing-Pages/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/pietertenret/Documents/VitalStorm/Sandbox/Weeks/gatsby/node_modules/gatsby-source-sanity/gatsby-ssr'),
-      options: {"plugins":[],"projectId":"kir55k7v","dataset":"production","overlayDrafts":true,"watchMode":true},
+      plugin: require('C:/Users/Work/Documents/GitHub/Weeks-Landing-Pages/node_modules/gatsby-source-sanity/gatsby-ssr'),
+      options: {"plugins":[],"projectId":"xmv3o2mg","dataset":"production","overlayDrafts":true,"watchMode":true},
     },{
-      plugin: require('/Users/pietertenret/Documents/VitalStorm/Sandbox/Weeks/gatsby/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      plugin: require('C:/Users/Work/Documents/GitHub/Weeks-Landing-Pages/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"namespace":"","transpileTemplateLiterals":true,"pure":false},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
