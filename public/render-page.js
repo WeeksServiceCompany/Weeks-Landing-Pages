@@ -128,6 +128,11 @@ var plugins = [{
     "transpileTemplateLiterals": true,
     "pure": false
   }
+}, {
+  plugin: __webpack_require__(/*! ./gatsby-ssr */ "./gatsby-ssr.js"),
+  options: {
+    "plugins": []
+  }
 }];
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
@@ -560,6 +565,23 @@ Html = Html && Html.__esModule ? Html.default : Html;
   htmlStr = `<!DOCTYPE html>${htmlStr}`;
   callback(null, htmlStr);
 });
+
+/***/ }),
+
+/***/ "./gatsby-ssr.js":
+/*!***********************!*\
+  !*** ./gatsby-ssr.js ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/ssr-apis/
+ */
+
+// You can delete this file if you're not using it
 
 /***/ }),
 

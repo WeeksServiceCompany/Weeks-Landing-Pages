@@ -7,6 +7,9 @@ var plugins = [{
     },{
       plugin: require('C:/Users/Work/Documents/GitHub/Weeks-Landing-Pages/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"namespace":"","transpileTemplateLiterals":true,"pure":false},
+    },{
+      plugin: require('C:/Users/Work/Documents/GitHub/Weeks-Landing-Pages/gatsby-ssr'),
+      options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
