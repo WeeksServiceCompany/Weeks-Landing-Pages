@@ -573,7 +573,7 @@ Html = Html && Html.__esModule ? Html.default : Html;
   !*** ./gatsby-ssr.js ***!
   \***********************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 /**
  * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
@@ -582,6 +582,18 @@ Html = Html && Html.__esModule ? Html.default : Html;
  */
 
 // You can delete this file if you're not using it
+const React = __webpack_require__(/*! react */ "react");
+exports.onRenderBody = ({
+  setHeadComponents
+}) => {
+  setHeadComponents([/*#__PURE__*/React.createElement("script", {
+    "data-api-key": "s125da2s6hshj7oh6w639ppc",
+    "data-schedulerid": "sched_qpfsy4voj5ugkkqw4dq2rv1o",
+    defer: "",
+    id: "se-widget-embed",
+    src: "https://embed.scheduler.servicetitan.com/scheduler-v1.js"
+  })]);
+};
 
 /***/ }),
 
