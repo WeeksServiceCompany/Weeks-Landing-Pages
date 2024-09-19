@@ -204,7 +204,16 @@ export default ({ data }) => (
 
               </p>
               <div className="schedule-btn">
-              <a onClick={changeActive} className="buttonstyle" style={{background: "linear-gradient( to right,"+ data.sanityCompanyInfo.gradientcolor1.hex + ","+ data.sanityCompanyInfo.gradientcolor2.hex +")"}}>Schedule Today for <span style={{color: data.sanityCompanyInfo.tertiarycolor.hex }}>{data.sanityPages.coupon.title}</span> <FaArrowRight /></a>
+              <button
+                          onClick={() => _scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' })}
+                          type="button"
+                          className="buttonstyle"
+                          style={{
+                            background: `linear-gradient(to right, ${data.sanityCompanyInfo.gradientcolor1.hex}, ${data.sanityCompanyInfo.gradientcolor2.hex})`,
+                          }}
+                        >
+                          Schedule Today!
+                        </button>
 
 
               </div>
@@ -255,7 +264,16 @@ export default ({ data }) => (
     </div>
     </div>
     <div className="sticky-mobile">
-              <a onClick={changeActive} className="schedule-btn" style={{background: "linear-gradient( to right,"+ data.sanityCompanyInfo.gradientcolor1.hex + ","+ data.sanityCompanyInfo.gradientcolor2.hex +")"}}>Schedule Today for <span style={{color: data.sanityCompanyInfo.tertiarycolor.hex }}>{data.sanityPages.coupon.title}</span> <FaArrowRight /></a>
+    <button
+                          onClick={() => _scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' })}
+                          type="button"
+                          className="buttonstyle"
+                          style={{
+                            background: `linear-gradient(to right, ${data.sanityCompanyInfo.gradientcolor1.hex}, ${data.sanityCompanyInfo.gradientcolor2.hex})`,
+                          }}
+                        >
+                          Schedule Today!
+                        </button>
             </div>
   </Layout>
 )
