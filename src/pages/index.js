@@ -387,9 +387,7 @@ return (
                 <div className="column2 column">
                     <div className="inner">
                     <h3>Don’t Wait All Day for Service!</h3>
-                    <button
-                        onClick={() => {
-                          if (typeof window !== "undefined" && window._scheduler) {
+                    <button onClick={() => { if (typeof window !== "undefined" && window._scheduler) {
                             _scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' });
                           } else {
                             console.error("_scheduler is not defined.");
