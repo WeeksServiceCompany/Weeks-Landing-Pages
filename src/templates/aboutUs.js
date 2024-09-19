@@ -246,7 +246,7 @@ export default ({ data }) => {
               <div className="schedule-btn">
                 {/*<button onClick={() => _scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' })} type="button"  className="buttonstyle"  style={{ background: `linear-gradient(to right, ${data.sanityCompanyInfo.gradientcolor1.hex}, ${data.sanityCompanyInfo.gradientcolor2.hex})` }} > Schedule Today! </button>*/}
                 <button
-                  onClick={() => {_scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' });}}
+                  onClick={() => _scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' })}
                   type="button"
                   className="buttonstyle"
                   style={{
@@ -255,7 +255,7 @@ export default ({ data }) => {
                 >
                   Schedule Today!
                 </button>
-                <iframe class="se-widget-iframe" id="se-widget-iframe" allow="geolocation" src="https://scheduler.servicetitan.com/?brandId=brand_miar9grn7i5w5c472k1mvjli&amp;api_key=s125da2s6hshj7oh6w639ppc&amp;schedulerid=sched_qpfsy4voj5ugkkqw4dq2rv1o&amp;client_url=https%3A%2F%2Fnew-button--weeks-landing-pages.netlify.app%2F&amp;client_referrer="></iframe>
+                {/* <iframe class="se-widget-iframe" id="se-widget-iframe" allow="geolocation" src="https://scheduler.servicetitan.com/?brandId=brand_miar9grn7i5w5c472k1mvjli&amp;api_key=s125da2s6hshj7oh6w639ppc&amp;schedulerid=sched_qpfsy4voj5ugkkqw4dq2rv1o&amp;client_url=https%3A%2F%2Fnew-button--weeks-landing-pages.netlify.app%2F&amp;client_referrer="></iframe> */}
               </div>
           </div>
         </div>
