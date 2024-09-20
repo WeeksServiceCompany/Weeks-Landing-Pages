@@ -319,6 +319,7 @@ export default ({ data }) => (
                 <div className="column2 column">
                     <div className="inner">
                     <h3>Don’t Wait All Day for Service!</h3>
+                    {/* global _scheduler */}
                     <button onClick={() => { if (typeof window !== "undefined" && window._scheduler) {
                             _scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' });
                           } else {

@@ -211,6 +211,7 @@ export default ({ data }) => {
                     <PortableText style={{color: data.sanityCompanyInfo.primarycolor.hex}} blocks={data.sanityServicepages._rawPageIntro} />
 
                     <div className="schedule-btn">
+                        {/* global _scheduler */}
                     <button
                           onClick={() => _scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' })}
                           type="button"
