@@ -204,7 +204,16 @@ export default ({ data }) => (
 
               </p>
               <div className="schedule-btn">
-              <a onClick={changeActive} className="buttonstyle" style={{background: "linear-gradient( to right,"+ data.sanityCompanyInfo.gradientcolor1.hex + ","+ data.sanityCompanyInfo.gradientcolor2.hex +")"}}>Schedule Today for <span style={{color: data.sanityCompanyInfo.tertiarycolor.hex }}>{data.sanityPages.coupon.title}</span> <FaArrowRight /></a>
+              <button
+                          onClick={() => _scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' })}
+                          type="button"
+                          className="buttonstyle"
+                          style={{
+                            background: `linear-gradient(to right, ${data.sanityCompanyInfo.gradientcolor1.hex}, ${data.sanityCompanyInfo.gradientcolor2.hex})`,
+                          }}
+                        >
+                          Schedule Today!
+                        </button>
 
 
               </div>
@@ -244,8 +253,20 @@ export default ({ data }) => (
                 <div className="column2 column">
                     <div className="inner">
                     <h3>Don’t Wait All Day for Service!</h3>
-                    <p>Fill out the form below and we’ll reach out to schedule your appointment.</p>
-                    <CouponForm />
+                    <button onClick={() => { if (typeof window !== "undefined" && window._scheduler) {
+                            _scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' });
+                          } else {
+                            console.error("_scheduler is not defined.");
+                          }
+                        }}
+                        type="button"
+                        className="buttonstyle"
+                        style={{
+                          background: `linear-gradient(to right, ${data.sanityCompanyInfo.gradientcolor1.hex}, ${data.sanityCompanyInfo.gradientcolor2.hex})`,
+                        }}
+                      >
+                        Schedule Today!
+                      </button>
                     </div>
                 </div>
                 </div>
@@ -255,7 +276,16 @@ export default ({ data }) => (
     </div>
     </div>
     <div className="sticky-mobile">
-              <a onClick={changeActive} className="schedule-btn" style={{background: "linear-gradient( to right,"+ data.sanityCompanyInfo.gradientcolor1.hex + ","+ data.sanityCompanyInfo.gradientcolor2.hex +")"}}>Schedule Today for <span style={{color: data.sanityCompanyInfo.tertiarycolor.hex }}>{data.sanityPages.coupon.title}</span> <FaArrowRight /></a>
+    <button
+                          onClick={() => _scheduler.show({ schedulerId: 'sched_ueh8gn35t4t1h87sxzab4dp3' })}
+                          type="button"
+                          className="buttonstyle"
+                          style={{
+                            background: `linear-gradient(to right, ${data.sanityCompanyInfo.gradientcolor1.hex}, ${data.sanityCompanyInfo.gradientcolor2.hex})`,
+                          }}
+                        >
+                          Schedule Today!
+                        </button>
             </div>
   </Layout>
 )

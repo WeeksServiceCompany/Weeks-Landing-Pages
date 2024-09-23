@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("/Users/pietertenret/Documents/VitalStorm/Sandbox/Weeks/gatsby/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"), require("react-helmet"));
+		module.exports = factory(require("C:\\Users\\Work\\Documents\\GitHub\\Weeks-Landing-Pages\\node_modules\\lodash\\merge.js"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["/Users/pietertenret/Documents/VitalStorm/Sandbox/Weeks/gatsby/node_modules/lodash/merge.js", "react", "react-dom/server", "react-helmet"], factory);
+		define("lib", ["C:\\Users\\Work\\Documents\\GitHub\\Weeks-Landing-Pages\\node_modules\\lodash\\merge.js", "react", "react-dom/server", "react-helmet"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("/Users/pietertenret/Documents/VitalStorm/Sandbox/Weeks/gatsby/node_modules/lodash/merge.js"), require("react"), require("react-dom/server"), require("react-helmet"));
+		exports["lib"] = factory(require("C:\\Users\\Work\\Documents\\GitHub\\Weeks-Landing-Pages\\node_modules\\lodash\\merge.js"), require("react"), require("react-dom/server"), require("react-helmet"));
 	else
-		root["lib"] = factory(root["/Users/pietertenret/Documents/VitalStorm/Sandbox/Weeks/gatsby/node_modules/lodash/merge.js"], root["react"], root["react-dom/server"], root["react-helmet"]);
+		root["lib"] = factory(root["C:\\Users\\Work\\Documents\\GitHub\\Weeks-Landing-Pages\\node_modules\\lodash\\merge.js"], root["react"], root["react-dom/server"], root["react-helmet"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_lodash_merge__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__, __WEBPACK_EXTERNAL_MODULE_react_helmet__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -112,7 +112,7 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-source-sanity/gatsby-ssr */ "./node_modules/gatsby-source-sanity/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "projectId": "kir55k7v",
+    "projectId": "xmv3o2mg",
     "dataset": "production",
     "overlayDrafts": true,
     "watchMode": true
@@ -128,7 +128,13 @@ var plugins = [{
     "transpileTemplateLiterals": true,
     "pure": false
   }
-}]; // During bootstrap, we write requires at top of this file which looks like:
+}, {
+  plugin: __webpack_require__(/*! ./gatsby-ssr */ "./gatsby-ssr.js"),
+  options: {
+    "plugins": []
+  }
+}];
+// During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
 //     plugin: require("/path/to/plugin1/gatsby-ssr.js"),
@@ -140,35 +146,32 @@ var plugins = [{
 //   },
 // ]
 
-const apis = __webpack_require__(/*! ./api-ssr-docs */ "./.cache/api-ssr-docs.js"); // Run the specified API in any plugins that have implemented it
+const apis = __webpack_require__(/*! ./api-ssr-docs */ "./.cache/api-ssr-docs.js");
 
-
+// Run the specified API in any plugins that have implemented it
 module.exports = (api, args, defaultReturn, argTransform) => {
   if (!apis[api]) {
     console.log(`This API doesn't exist`, api);
-  } // Run each plugin in series.
+  }
+
+  // Run each plugin in series.
   // eslint-disable-next-line no-undef
-
-
   let results = plugins.map(plugin => {
     if (!plugin.plugin[api]) {
       return undefined;
     }
-
     const result = plugin.plugin[api](args, plugin.options);
-
     if (result && argTransform) {
       args = argTransform({
         args,
         result
       });
     }
-
     return result;
-  }); // Filter out undefined results.
+  });
 
+  // Filter out undefined results.
   results = results.filter(result => typeof result !== `undefined`);
-
   if (results.length > 0) {
     return results;
   } else {
@@ -229,6 +232,7 @@ module.exports = (api, args, defaultReturn, argTransform) => {
  * }
  */
 exports.replaceRenderer = true;
+
 /**
  * Called after every page Gatsby server renders while building HTML so you can
  * set head and body components to be rendered in your `html.js`.
@@ -291,8 +295,8 @@ exports.replaceRenderer = true;
  *   setBodyAttributes(BodyAttributes)
  * }
  */
-
 exports.onRenderBody = true;
+
 /**
  * Called after every page Gatsby server renders while building HTML so you can
  * replace head components to be rendered in your `html.js`. This is useful if
@@ -330,8 +334,8 @@ exports.onRenderBody = true;
  *   replaceHeadComponents(headComponents)
  * }
  */
-
 exports.onPreRenderHTML = true;
+
 /**
  * Allow a plugin to wrap the page element.
  *
@@ -357,8 +361,8 @@ exports.onPreRenderHTML = true;
  *   return <Layout {...props}>{element}</Layout>
  * }
  */
-
 exports.wrapPageElement = true;
+
 /**
  * Allow a plugin to wrap the root element.
  *
@@ -388,7 +392,6 @@ exports.wrapPageElement = true;
  *   )
  * }
  */
-
 exports.wrapRootElement = true;
 
 /***/ }),
@@ -457,19 +460,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import testRequireError from "./test-require-error"
+
+// import testRequireError from "./test-require-error"
 // For some extremely mysterious reason, webpack adds the above module *after*
 // this module so that when this code runs, testRequireError is undefined.
 // So in the meantime, we'll just inline it.
-
 const testRequireError = (moduleName, err) => {
   const regex = new RegExp(`Error: Cannot find module\\s.${moduleName}`);
   const firstLine = err.toString().split(`\n`)[0];
   return regex.test(firstLine);
 };
-
 let Html;
-
 try {
   Html = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module '../src/html'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 } catch (err) {
@@ -480,7 +481,6 @@ try {
     process.exit();
   }
 }
-
 Html = Html && Html.__esModule ? Html.default : Html;
 /* harmony default export */ __webpack_exports__["default"] = ((pagePath, callback) => {
   let headComponents = [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("meta", {
@@ -494,49 +494,36 @@ Html = Html && Html.__esModule ? Html.default : Html;
   let postBodyComponents = [];
   let bodyProps = {};
   let htmlStr;
-
   const setHeadComponents = components => {
     headComponents = headComponents.concat(components);
   };
-
   const setHtmlAttributes = attributes => {
     htmlAttributes = lodash_merge__WEBPACK_IMPORTED_MODULE_0___default()(htmlAttributes, attributes);
   };
-
   const setBodyAttributes = attributes => {
     bodyAttributes = lodash_merge__WEBPACK_IMPORTED_MODULE_0___default()(bodyAttributes, attributes);
   };
-
   const setPreBodyComponents = components => {
     preBodyComponents = preBodyComponents.concat(components);
   };
-
   const setPostBodyComponents = components => {
     postBodyComponents = postBodyComponents.concat(components);
   };
-
   const setBodyProps = props => {
     bodyProps = lodash_merge__WEBPACK_IMPORTED_MODULE_0___default()({}, bodyProps, props);
   };
-
   const getHeadComponents = () => headComponents;
-
   const replaceHeadComponents = components => {
     headComponents = components;
   };
-
   const getPreBodyComponents = () => preBodyComponents;
-
   const replacePreBodyComponents = components => {
     preBodyComponents = components;
   };
-
   const getPostBodyComponents = () => postBodyComponents;
-
   const replacePostBodyComponents = components => {
     postBodyComponents = components;
   };
-
   _api_runner_ssr__WEBPACK_IMPORTED_MODULE_3___default()(`onRenderBody`, {
     setHeadComponents,
     setHtmlAttributes,
@@ -555,7 +542,8 @@ Html = Html && Html.__esModule ? Html.default : Html;
     replacePostBodyComponents,
     pathname: pagePath
   });
-  const htmlElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Html, { ...bodyProps,
+  const htmlElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Html, {
+    ...bodyProps,
     body: ``,
     headComponents: headComponents.concat([/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("script", {
       key: `io`,
@@ -580,6 +568,35 @@ Html = Html && Html.__esModule ? Html.default : Html;
 
 /***/ }),
 
+/***/ "./gatsby-ssr.js":
+/*!***********************!*\
+  !*** ./gatsby-ssr.js ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/ssr-apis/
+ */
+
+// You can delete this file if you're not using it
+const React = __webpack_require__(/*! react */ "react");
+exports.onRenderBody = ({
+  setHeadComponents
+}) => {
+  setHeadComponents([/*#__PURE__*/React.createElement("script", {
+    "data-api-key": "s125da2s6hshj7oh6w639ppc",
+    "data-schedulerid": "sched_qpfsy4voj5ugkkqw4dq2rv1o",
+    defer: "",
+    id: "se-widget-embed",
+    src: "https://embed.scheduler.servicetitan.com/scheduler-v1.js"
+  })]);
+};
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
@@ -587,14 +604,12 @@ Html = Html && Html.__esModule ? Html.default : Html;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
+function _interopRequireDefault(e) {
+  return e && e.__esModule ? e : {
+    "default": e
   };
 }
-
-module.exports = _interopRequireDefault;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
+module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
 /***/ }),
 
@@ -724,28 +739,21 @@ var unitlessKeys = {
 
 exports.__esModule = true;
 exports.onRenderBody = void 0;
-
 var _reactHelmet = __webpack_require__(/*! react-helmet */ "react-helmet");
-
 var onRenderBody = function onRenderBody(_ref) {
   var setHeadComponents = _ref.setHeadComponents,
-      setHtmlAttributes = _ref.setHtmlAttributes,
-      setBodyAttributes = _ref.setBodyAttributes;
-
+    setHtmlAttributes = _ref.setHtmlAttributes,
+    setBodyAttributes = _ref.setBodyAttributes;
   var helmet = _reactHelmet.Helmet.renderStatic(); // These action functions were added partway through the Gatsby 1.x cycle.
-
 
   if (setHtmlAttributes) {
     setHtmlAttributes(helmet.htmlAttributes.toComponent());
   }
-
   if (setBodyAttributes) {
     setBodyAttributes(helmet.bodyAttributes.toComponent());
   }
-
   setHeadComponents([helmet.title.toComponent(), helmet.link.toComponent(), helmet.meta.toComponent(), helmet.noscript.toComponent(), helmet.script.toComponent(), helmet.style.toComponent(), helmet.base.toComponent()]);
 };
-
 exports.onRenderBody = onRenderBody;
 
 /***/ }),
@@ -761,28 +769,23 @@ exports.onRenderBody = onRenderBody;
 
 
 var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
 var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
 var _styledComponents = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.esm.js");
-
 var sheetByPathname = new Map(); // eslint-disable-next-line react/prop-types,react/display-name
 
 exports.wrapRootElement = function (_ref) {
   var element = _ref.element,
-      pathname = _ref.pathname;
+    pathname = _ref.pathname;
   var sheet = new _styledComponents.ServerStyleSheet();
   sheetByPathname.set(pathname, sheet);
   return /*#__PURE__*/_react.default.createElement(_styledComponents.StyleSheetManager, {
     sheet: sheet.instance
   }, element);
 };
-
 exports.onRenderBody = function (_ref2) {
   var setHeadComponents = _ref2.setHeadComponents,
-      pathname = _ref2.pathname;
+    pathname = _ref2.pathname;
   var sheet = sheetByPathname.get(pathname);
-
   if (sheet) {
     setHeadComponents([sheet.getStyleElement()]);
     sheetByPathname.delete(pathname);
@@ -802,7 +805,6 @@ exports.onRenderBody = function (_ref2) {
 // Note that unlike gatsby-node.js, we need to explicitly define the exported hooks
 // as they seem to be statically analyzed at build time.
 const ssr = __webpack_require__(/*! ./lib/gatsby-ssr */ "./node_modules/gatsby-source-sanity/lib/gatsby-ssr.js");
-
 exports.onRenderBody = ssr.onRenderBody;
 
 /***/ }),
@@ -820,9 +822,7 @@ exports.onRenderBody = ssr.onRenderBody;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
 const react_1 = __webpack_require__(/*! react */ "react");
-
 exports.onRenderBody = ({
   setHeadComponents
 }, config) => {
@@ -1536,7 +1536,7 @@ var printWarning = function() {};
 if (true) {
   var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
   var loggedTypeFailures = {};
-  var has = Function.call.bind(Object.prototype.hasOwnProperty);
+  var has = __webpack_require__(/*! ./lib/has */ "./node_modules/prop-types/lib/has.js");
 
   printWarning = function(text) {
     var message = 'Warning: ' + text;
@@ -1548,7 +1548,7 @@ if (true) {
       // This error was thrown as a convenience so that you can use this stack
       // to find the callsite that caused this warning to fire.
       throw new Error(message);
-    } catch (x) {}
+    } catch (x) { /**/ }
   };
 }
 
@@ -1577,7 +1577,8 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
           if (typeof typeSpecs[typeSpecName] !== 'function') {
             var err = Error(
               (componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' +
-              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.'
+              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.' +
+              'This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.'
             );
             err.name = 'Invariant Violation';
             throw err;
@@ -1649,9 +1650,9 @@ var ReactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index
 var assign = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
 
 var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+var has = __webpack_require__(/*! ./lib/has */ "./node_modules/prop-types/lib/has.js");
 var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ "./node_modules/prop-types/checkPropTypes.js");
 
-var has = Function.call.bind(Object.prototype.hasOwnProperty);
 var printWarning = function() {};
 
 if (true) {
@@ -1752,6 +1753,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
   var ReactPropTypes = {
     array: createPrimitiveTypeChecker('array'),
+    bigint: createPrimitiveTypeChecker('bigint'),
     bool: createPrimitiveTypeChecker('boolean'),
     func: createPrimitiveTypeChecker('function'),
     number: createPrimitiveTypeChecker('number'),
@@ -1797,8 +1799,9 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
    * is prohibitively expensive if they are created too often, such as what
    * happens in oneOfType() for any type before the one that matched.
    */
-  function PropTypeError(message) {
+  function PropTypeError(message, data) {
     this.message = message;
+    this.data = data && typeof data === 'object' ? data: {};
     this.stack = '';
   }
   // Make `instanceof Error` still work for returned errors.
@@ -1833,7 +1836,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
           ) {
             printWarning(
               'You are manually calling a React.PropTypes validation ' +
-              'function for the `' + propFullName + '` prop on `' + componentName  + '`. This is deprecated ' +
+              'function for the `' + propFullName + '` prop on `' + componentName + '`. This is deprecated ' +
               'and will throw in the standalone `prop-types` package. ' +
               'You may be seeing this warning due to a third-party PropTypes ' +
               'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.'
@@ -1872,7 +1875,10 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
         // 'of type `object`'.
         var preciseType = getPreciseType(propValue);
 
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
+        return new PropTypeError(
+          'Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'),
+          {expectedType: expectedType}
+        );
       }
       return null;
     }
@@ -2016,14 +2022,19 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     }
 
     function validate(props, propName, componentName, location, propFullName) {
+      var expectedTypes = [];
       for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
         var checker = arrayOfTypeCheckers[i];
-        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+        var checkerResult = checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret);
+        if (checkerResult == null) {
           return null;
         }
+        if (checkerResult.data && has(checkerResult.data, 'expectedType')) {
+          expectedTypes.push(checkerResult.data.expectedType);
+        }
       }
-
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+      var expectedTypesMessage = (expectedTypes.length > 0) ? ', expected one of type [' + expectedTypes.join(', ') + ']': '';
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`' + expectedTypesMessage + '.'));
     }
     return createChainableTypeChecker(validate);
   }
@@ -2038,6 +2049,13 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     return createChainableTypeChecker(validate);
   }
 
+  function invalidValidatorError(componentName, location, propFullName, key, type) {
+    return new PropTypeError(
+      (componentName || 'React class') + ': ' + location + ' type `' + propFullName + '.' + key + '` is invalid; ' +
+      'it must be a function, usually from the `prop-types` package, but received `' + type + '`.'
+    );
+  }
+
   function createShapeTypeChecker(shapeTypes) {
     function validate(props, propName, componentName, location, propFullName) {
       var propValue = props[propName];
@@ -2047,8 +2065,8 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
       }
       for (var key in shapeTypes) {
         var checker = shapeTypes[key];
-        if (!checker) {
-          continue;
+        if (typeof checker !== 'function') {
+          return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
         }
         var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
         if (error) {
@@ -2067,16 +2085,18 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
       if (propType !== 'object') {
         return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
       }
-      // We need to check all keys in case some are required but missing from
-      // props.
+      // We need to check all keys in case some are required but missing from props.
       var allKeys = assign({}, props[propName], shapeTypes);
       for (var key in allKeys) {
         var checker = shapeTypes[key];
+        if (has(shapeTypes, key) && typeof checker !== 'function') {
+          return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
+        }
         if (!checker) {
           return new PropTypeError(
             'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
             '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
-            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
+            '\nValid keys: ' + JSON.stringify(Object.keys(shapeTypes), null, '  ')
           );
         }
         var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
@@ -2277,6 +2297,18 @@ if (true) {
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
+
+
+/***/ }),
+
+/***/ "./node_modules/prop-types/lib/has.js":
+/*!********************************************!*\
+  !*** ./node_modules/prop-types/lib/has.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
 
 
 /***/ }),
@@ -5088,9 +5120,9 @@ if ( true && typeof window !== 'undefined' && typeof navigator !== 'undefined' &
 /***/ }),
 
 /***/ "lodash/merge":
-/*!*************************************************************************************************************!*\
-  !*** external "/Users/pietertenret/Documents/VitalStorm/Sandbox/Weeks/gatsby/node_modules/lodash/merge.js" ***!
-  \*************************************************************************************************************/
+/*!**********************************************************************************************************!*\
+  !*** external "C:\\Users\\Work\\Documents\\GitHub\\Weeks-Landing-Pages\\node_modules\\lodash\\merge.js" ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
